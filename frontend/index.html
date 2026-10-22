@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application MERN — Éléments</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Mes éléments</h1>
+      <p id="server-status" class="status" aria-live="polite">Connexion au serveur…</p>
+    </header>
+
+    <div id="error-box" class="alert" role="alert" hidden></div>
+
+    <section class="card">
+      <h2>Ajouter un élément</h2>
+      <form id="item-form" novalidate>
+        <label for="name">Nom *</label>
+        <input id="name" name="name" type="text" maxlength="100" required autocomplete="off">
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="3" maxlength="500"></textarea>
+
+        <button id="submit-btn" type="submit">Ajouter</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Liste</h2>
+        <button id="refresh-btn" type="button" class="secondary">Actualiser</button>
+      </div>
+      <p id="empty" hidden>Aucun élément pour le moment.</p>
+      <ul id="items" class="items"></ul>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="api.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

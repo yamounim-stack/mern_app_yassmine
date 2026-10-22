@@ -1,0 +1,17 @@
+# Dépendances
+node_modules/
+
+# Secrets : ne JAMAIS committer
+.env
+.env.*
+!.env.example
+
+# Build / plateformes
+dist/
+build/
+.vercel/
+.railway/
+
+# Divers
+*.log
+.DS_Store
